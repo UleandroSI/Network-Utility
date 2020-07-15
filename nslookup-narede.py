@@ -8,6 +8,7 @@ __email__ = "uleandrosp7@gmail.com"
 __status__ = "Development"
 
 import socket
+import time
 
 # Abrir arquivo .txt que está na mesma pasta
 arquivo = open("IPs.txt", "r")
@@ -26,6 +27,7 @@ for linha in arquivo:
             break
         except socket.gaierror:
             print("srvdc não encontrou ",linha)
+            #time.sleep(2.4)
             break
 
 arquivo.close()
